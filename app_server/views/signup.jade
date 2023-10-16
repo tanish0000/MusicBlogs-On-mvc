@@ -1,0 +1,211 @@
+doctype html
+html 
+  head
+    title Registration or Sign Up form in HTML CSS | CodingLab
+    style. 
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #aulogo{
+
+        width: 120px;
+        height: 33px;
+      }
+      #logo{
+        margin-right: 45rem;
+      }
+      body {
+        background-image: src('/images/back1.jpg');
+        background-size: cover;
+
+        font-family: "Open Sans", sans-serif;
+
+      }
+      
+      a {
+        text-decoration:none;
+        color: blue;
+ 
+      }
+
+      nav {
+        padding: 20px;
+        padding-left: 0%;
+        width: 100%;
+        color: #fff;
+        justify-content: space-between;
+        display: flex;
+
+      }
+      nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav li {
+        margin: 0 15px;
+        font-size: 1.1rem;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+      }
+      nav.navbar {
+        z-index: 1;
+      }
+      nav a:hover {
+        font-weight: bold;
+      }
+      @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .wrapper{
+        text-align: center;
+        margin-top: 40px;
+        max-width: 430px;
+        width: 100%;
+        background: #fff;
+        padding: 34px;
+        border-radius: 6px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+      }
+      .wrapper h2{
+        position: relative;
+        font-size: 22px;
+        font-weight: 600;
+        color: #333;
+      }
+      .wrapper h2::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 28px;
+        border-radius: 12px;
+        background: #4070f4;
+      }
+      .wrapper form{
+        margin-top: 30px;
+      }
+      .wrapper form .input-box{
+        height: 52px;
+        margin: 18px 0;
+      }
+      form .input-box input{
+        height: 100%;
+        width: 100%;
+        outline: none;
+        padding: 0 15px;
+        font-size: 17px;
+        font-weight: 400;
+        color: #333;
+        border: 1.5px solid #C7BEBE;
+        border-bottom-width: 2.5px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+      }
+      .input-box input:focus,
+      .input-box input:valid{
+        border-color: #4070f4;
+      }
+      form .policy{
+        display: flex;
+        align-items: center;
+      }
+      form h3{
+        color: #707070;
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: 10px;
+      }
+      .input-box.button input{
+        color: #fff;
+        letter-spacing: 1px;
+        border: none;
+        background: #4070f4;
+        cursor: pointer;
+      }
+      .input-box.button input:hover{
+        background: #0e4bf1;
+      }
+      form .text h3{
+      color: #333;
+      width: 100%;
+      text-align: center;
+      }
+      form .text h3 a{
+        color: #4070f4;
+        text-decoration: none;
+      }
+      form .text h3 a:hover{
+        text-decoration: underline;
+      }
+      .wrapper {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        }
+  body
+
+    .div.regi
+      .wrapper
+        h2 Registration
+        form(action='/auth/register',method='post')
+          .input-box
+            input(name='username',type="text", placeholder="Enter your name", required)
+          .input-box
+            input(name='email',type="text", placeholder="Enter your email", required)
+          .input-box
+            input(name='password',type="password", placeholder="Create password", required)
+          .input-box
+            input(type="password", placeholder="Confirm password", required)
+          .policy
+            input(type="checkbox")
+            h3 I accept all terms & condition
+          .input-box.button
+            input(type="submit", value="Register Now")
+          .text
+            h3 Already have an account? 
+            a(href="/login") Login now
+  script. 
+    // signup.js
+    const signupForm = document.getElementById('signup-form');
+
+    signupForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(signupForm);
+        const username = formData.get('username');
+        const password = formData.get('password');
+
+        try {
+            const response = await fetch('/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            });
+
+            if (response.status === 201) {
+                alert('User created successfully');
+                window.location.href = '/login'; // Redirect to login page
+            } else {
+                const errorMessage = await response.text();
+                alert(errorMessage);
+            }
+          } catch (error) {
+            console.error(error);
+         }
+         });
+

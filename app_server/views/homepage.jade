@@ -1,0 +1,317 @@
+doctype html
+html
+  head
+    title Music Blogs | Official Website
+   
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/animate.css')
+    
+    
+
+   
+    // Bootstrap
+
+    //link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    #fb-root
+    script.
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=249078091804020&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    // Header Starts
+    .navbar-wrapper
+      .container
+        .navbar.navbar-inverse.navbar-fixed-top.animated.fadeInDown(role='navigation', id='top-nav')
+          .container
+            .navbar-header
+              // Logo Starts
+              a.navbar-brand(href='#home')
+                img(src='/images/logo.png', height='30', alt='logo')
+                // #Logo Ends
+              button.navbar-toggle.collapsed(data-toggle='collapse', data-target='.navbar-collapse')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            // Nav Starts
+            .navbar-collapse.collapse
+              ul.nav.navbar-nav.navbar-right
+                li.active
+                  a(href='#home') Home
+                li
+                  a(href='#playlist') Playlist
+                li
+                  a(href='#album') Albums
+                li
+                  a(href='#blogevent') Events & Blog
+                li
+                  a(href='#contact') Contact
+                li
+                  a(href='/signup/') SignUp
+            // #Nav Ends
+        .container
+    // #Header Starts
+    // overlay
+    .container.overlay
+      // home banner starts
+      #home.homeinfo
+        .row
+          .col-sm-6.col-xs-12
+            .fronttext
+              h2.bgcolor.animated.fadeInUpBig
+                span.glyphicon.glyphicon-headphones
+                |  Music blogs
+              br
+              p.animated.fadeInUp Best DJ in town. There are other and natural causes tending toward a diminution of population, but nothing contributes so greatly to this end as the fact that no male or female Martian is ever voluntarily without a weapon of destruction.
+          .col-sm-5.col-xs-12.col-sm-offset-1
+            .player
+              img(src='/images/dj.png', class='graphics hidden-xs animated.fadeInRightBig', alt='dj')
+              iframe(width='100%', height='170', scrolling='no', frameborder='no', src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/66392700&amp;color=f2ab00&amp;theme_color=000000&amp;auto_play=true&amp;hide_related=true&amp;show_artwork=false')
+    // home banner ends
+    // blockblack
+    .blockblack
+      // playlist Starts
+      #playlist.spacer
+        .row
+          .col-md-12.col-xs-12
+            h3
+              span.glyphicon.glyphicon-list
+              |  Playlist
+            iframe(width='100%', height='600', scrolling='no', frameborder='no', src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/24314082&amp;theme_color=000000&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=false')
+      // #playlist Ends
+      // latest release starts
+      #album.releases.spacer
+        h3
+          span.glyphicon.glyphicon-music
+          |  Album Releases
+        .row
+          .col-sm-3.col-xs-12
+            .album
+              img(src='/images/3.jpg', class='img-responsive', alt='music theme')
+              .albumdetail
+                h5 Crazy Freso
+                a.listen(data-toggle='modal', data-target='#albumdetail')
+                  span.glyphicon.glyphicon-headphones
+                  |  Listen Song
+          .col-sm-3.col-xs-12
+            .album
+              img(src='/images/1.jpg', class='img-responsive', alt='music theme')
+              .albumdetail
+                h5 Crazy Freso
+                a.listen(data-toggle='modal', data-target='#albumdetail')
+                  span.glyphicon.glyphicon-headphones
+                  |  Listen Song
+          .col-sm-3.col-xs-12
+            .album
+              img(src='/images/2.jpg', class='img-responsive', alt='music theme')
+              .albumdetail
+                h5 Crazy Freso
+                a.listen(data-toggle='modal', data-target='#albumdetail')
+                  span.glyphicon.glyphicon-headphones
+                  |  Listen Song
+          .col-sm-3.col-xs-12
+            .album
+              img(src='/images/4.jpg', class='img-responsive', alt='music theme')
+              .albumdetail
+                h5 Crazy Freso
+                a.listen(data-toggle='modal', data-target='#albumdetail')
+                  span.glyphicon.glyphicon-headphones
+                  |  Listen Song
+          .col-sm-3.col-xs-12
+            .album
+              img(src='/images/4.jpg', class='img-responsive', alt='music theme')
+              .albumdetail
+                h5 Crazy Freso
+                a.listen(data-toggle='modal', data-target='#albumdetail')
+                  span.glyphicon.glyphicon-headphones
+                  |  Listen Song
+          .col-sm-3.col-xs-12
+            .album
+              img(src='/images/2.jpg', class='img-responsive', alt='music theme')
+              .albumdetail
+                h5 Crazy Freso
+                a.listen(data-toggle='modal', data-target='#albumdetail')
+                  span.glyphicon.glyphicon-headphones
+                  |  Listen Song
+          .col-sm-3.col-xs-12
+            .album
+              img(src='/images/3.jpg', class='img-responsive', alt='music theme')
+              .albumdetail
+                h5 Crazy Freso
+                a.listen(data-toggle='modal', data-target='#albumdetail')
+                  span.glyphicon.glyphicon-headphones
+                  |  Listen Song
+          .col-sm-3.col-xs-12
+            .album
+              img(src='/images/1.jpg', class='img-responsive', alt='music theme')
+              .albumdetail
+                h5 Crazy Freso
+                a.listen(data-toggle='modal', data-target='#albumdetail')
+                  span.glyphicon.glyphicon-headphones
+                  |  Listen Song
+      // latest release ends
+      // Blog Event Starts
+      #blogevent.blogevent.spacer
+        .row
+          // events
+          .col-md-6.col-xs-12
+            .events
+              h3
+                span.glyphicon.glyphicon-calendar
+                |  Events
+              ul
+                li
+                  .row
+                    .col-xs-12.col-sm-3.col-lg-4
+                      a(href='#', data-toggle='modal', data-target='#blogdetail')
+                        img(src='/images/1.jpg', class='img-responsive', alt='music theme')
+                    .col-xs-12.col-sm-6.col-lg-5
+                      h5
+                        a(href='#', data-toggle='modal', data-target='#blogdetail') Christmas Eve Party
+                      p Typewriter photo booth vinyl post-ironic, literally keffiyeh locavore tofu lomo pug Odd Future.
+                    .col-xs-12.col-sm-3.col-lg-3.date
+                      b 2014
+                      span Dec 28
+                li
+                  .row
+                    .col-xs-12.col-sm-3.col-lg-4
+                      a(href='#', data-toggle='modal', data-target='#blogdetail')
+                        img(src='/images/2.jpg', class='img-responsive', alt='music theme')
+                    .col-xs-12.col-sm-6.col-lg-5
+                      h5
+                        a(href='#', data-toggle='modal', data-target='#blogdetail') Christmas Eve Party
+                      p Typewriter photo booth vinyl post-ironic, literally keffiyeh locavore tofu lomo pug Odd Future.
+                    .col-xs-12.col-sm-3.col-lg-3.date
+                      b 2014
+                      span Dec 28
+                li
+                  .row
+                    .col-xs-12.col-sm-3.col-lg-4
+                      a(href='#', data-toggle='modal', data-target='#blogdetail')
+                        img(src='/images/3.jpg', class='img-responsive', alt='music theme')
+                    .col-xs-12.col-sm-6.col-lg-5
+                      h5
+                        a(href='#', data-toggle='modal', data-target='#blogdetail') Christmas Eve Party
+                      p Typewriter photo booth vinyl post-ironic, literally keffiyeh locavore tofu lomo pug Odd Future.
+                    .col-xs-12.col-sm-3.col-lg-3.date
+                      b 2014
+                      span Dec 28
+                li
+                  .row
+                    .col-xs-12.col-sm-3.col-lg-4
+                      a(href='#', data-toggle='modal', data-target='#blogdetail')
+                        img(src='/images/4.jpg', class='img-responsive', alt='music theme')
+                    .col-xs-12.col-sm-6.col-lg-5
+                      h5
+                        a(href='#', data-toggle='modal', data-target='#blogdetail') Christmas Eve Party
+                      p Typewriter photo booth vinyl post-ironic, literally keffiyeh locavore tofu lomo pug Odd Future.
+                    .col-xs-12.col-sm-3.col-lg-3.date
+                      b 2014
+                      span Dec 28
+              // events
+              // blog
+          .col-md-5.col-md-offset-1.col-xs-12
+            .ourblog
+              h3
+                span.glyphicon.glyphicon-book
+                |  Blog
+              ul.row
+                li.row
+                  a(href='#', data-toggle='modal', data-target='#blogdetail', class='col-xs-12.col-sm-3.col-lg-4')
+                    img(src='/images/3.jpg', class='img-responsive', alt='music theme')
+                  .blogtext.col-xs-12.col-sm-9.col-lg-8
+                    h5
+                      a(href='#', data-toggle='modal', data-target='#blogdetail') New trends in music
+                    small Posted on: Jan 1, 2014
+                    p Typewriter photo booth vinyl post-ironic, literally keffiyeh locavore tofu lomo pug Odd Future.
+                li.row
+                  a(href='#', data-toggle='modal', data-target='#blogdetail', class='col-xs-12.col-sm-3.col-lg-4')
+                    img(src='/images/4.jpg', class='img-responsive', alt='music theme')
+                  .blogtext.col-xs-12.col-sm-9.col-lg-8
+                    h5
+                      a(href='#', data-toggle='modal', data-target='#blogdetail') New trends in music
+                    small Posted on: Jan 1, 2014
+                    p Typewriter photo booth vinyl post-ironic, literally keffiyeh locavore tofu lomo pug Odd Future.
+                li.row
+                  a(href='#', data-toggle='modal', data-target='#blogdetail', class='col-xs-12.col-sm-3.col-lg-4')
+                    img(src='/images/1.jpg', class='img-responsive', alt='music theme')
+                  .blogtext.col-xs-12.col-sm-9.col-lg-8
+                    h5
+                      a(href='#', data-toggle='modal', data-target='#blogdetail') New trends in music
+                    small Posted on: Jan 1, 2014
+                    p Typewriter photo booth vinyl post-ironic, literally keffiyeh locavore tofu lomo pug Odd Future.
+                li.row
+                  a(href='#', data-toggle='modal', data-target='#blogdetail', class='col-xs-12.col-sm-3.col-lg-4')
+                    img(src='/images/2.jpg', class='img-responsive', alt='music theme')
+                  .blogtext.col-xs-12.col-sm-9.col-lg-8
+                    h5
+                      a(href='#', data-toggle='modal', data-target='#blogdetail') New trends in music
+                    small Posted on: Jan 1, 2014
+                    p Typewriter photo booth vinyl post-ironic, literally keffiyeh locavore tofu lomo pug Odd Future.
+      // blog
+      // Blog Event Starts
+    //Contact Starts
+    #contact.spacer
+      .contactform.center
+        h3
+          span.glyphicon.glyphicon-envelope
+          |  Contact
+        .row
+          .col-sm-6.col-sm-offset-3
+            h4 Get in touch or
+              br
+              b Just say Hello!
+            input(type='text', placeholder='Name')
+            input(type='text', placeholder='Email')
+            textarea(rows='5', placeholder='Message')
+            button.btn.btn-warning.bgcolor Send
+          // map
+      .map.clearfix
+        .fb-like-box(data-href='https://www.facebook.com/thebootstrapthemes', data-width='100%', data-colorscheme='light', data-show-faces='true', data-header='true', data-stream='false', data-show-border='true')
+    //Contact Ends
+  // overlay
+  // Footer Starts
+  #footer
+    .container
+      | Copyright Tanish Vardhineni 2023
+  //  Footer Ends
+  // background slider
+  #myCarousel.carousel.hidden-xs
+    .carousel-inner
+      .active.item
+        img(src='/images/back1.jpg', alt='')
+      .item
+        img(src='/images/back2.jpg', alt='')
+      .item
+        img(src='/images/back3.jpg', alt='')
+  // background slider
+  // Modal
+  .modal.fade#blogdetail(tabindex='-1', role='dialog')
+    .modal-dialog
+      .modal-content
+        button.close(data-dismiss='modal', aria-hidden='true') ×
+      #blog
+        h2 New trends in music
+        small Posted on: Jan 20, 2013
+        a.thumbnail(href='#')
+          img(src='/images/1.jpg', class='img-reponsive', alt='blog')
+        .col-lg-8.col-lg-offset-2
+          p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+  // Modal
+  .modal.fade#albumdetail(tabindex='-1', role='dialog')
+    .modal-dialog
+      .modal-content
+        h2 Crazy Fresco
+        iframe(width='100%', height='450', scrolling='no', frameborder='no', src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/24314082&amp;theme_color=000000&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=false')
+  script(src='http://code.jquery.com/jquery-1.7.1.min.js', type='text/javascript')
+  // boostrap
+  script(src='/bootstrap/js/bootstrap.js', type='text/javascript')
+  script(src='/scripts/plugins.js', type='text/javascript')
+  script(src='/scripts/script.js', type='text/javascript')

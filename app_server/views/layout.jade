@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
+
+    
+  body
+    nav.navbar.navbar-default.navbar-fixed-top.gg
+      .container
+        ul
+          li#logo
+            a(href='/') 
+              img(src='/images/aulogo.png')#aulogo 
+          li
+            a(href='/tab1/') TAB 1 
+          li
+            a(href='/tab2/') TAB 2
+          li
+            a(href='/tab3/') TAB 3
+          li
+            a(href='/signup/') SignIN 
+
+    .container
+      block content
+    .container
+      footer
+        .row
+          .col-xs-12
+            small &copy; Tanish Vardhineni 2023
+           
+
+script(src='javascripts/main.js') 
